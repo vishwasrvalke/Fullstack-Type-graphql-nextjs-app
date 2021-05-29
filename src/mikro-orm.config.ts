@@ -2,6 +2,9 @@ import { MikroORM } from "@mikro-orm/core";
 import { __prod__ } from "./constants";
 import { Post } from "./entities/Post";
 import path from 'path';
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 export default {
     migrations:{
@@ -10,7 +13,7 @@ export default {
     },
     entities: [Post],
     dbName: "mycruddb",
-    password:"Vaishnavi123@",
+    password: process.env.PASSWORD,
     user:"postgres",
     type: "postgresql",
     debug: !__prod__,
