@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc -w",
-    "start": "ts-node src/index.ts",
+    "start2": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "dev2": "nodemon --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +24,7 @@
   "homepage": "https://github.com/vishwasrvalke/Typescript-graphql-crud#readme",
   "devDependencies": {
     "@types/node": "^15.6.1",
+    "nodemon": "^2.0.7",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2"
   }
