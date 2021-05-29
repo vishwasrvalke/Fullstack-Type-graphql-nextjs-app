@@ -1,2 +1,2 @@
-console.log("hello sjs");
+console.log("hello world");
 //# sourceMappingURL=index.js.map
