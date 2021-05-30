@@ -24,13 +24,13 @@ class UserResponse {
     @Field(() => [FieldError], { nullable: true })
     errors?: FieldError[];
 
-    @Field(() => [User], { nullable: true })
+    @Field(() => User, { nullable: true })
     user?: User;
 }
 
 @Resolver()
 export class UserResolver {
-    @Mutation(() => UserResponse)
+    @Mutation(() => User)
     async register(
         @Arg('options') options: UsernamePasswordInput,
         @Ctx() { em }: MyContext
@@ -51,7 +51,7 @@ export class UserResolver {
             return {
                 errors: [
                     {
-                        field: 'username',
+                        field: "username",
                         message: "User is non existant",
                     },
                 ],
