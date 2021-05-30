@@ -7,14 +7,14 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 export default {
-    migrations:{
-        path: path.join(__dirname,"./migrations"),
-        pattern: /^[\w-]+\d+\.[tj]s$/, 
+    migrations: {
+        path: path.join(__dirname, "./migrations"),
+        pattern: /^[\w-]+\d+\.[tj]s$/,
     },
     entities: [Post],
     dbName: "mycruddb",
     password: process.env.PASSWORD,
-    user:"postgres",
+    user: "postgres",
     type: "postgresql",
     debug: !__prod__,
 } as Parameters<typeof MikroORM.init>[0];

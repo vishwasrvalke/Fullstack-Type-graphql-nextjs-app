@@ -7,16 +7,16 @@ export class Post {
   @Field()
   @PrimaryKey()
   id!: number;
-  
+
   @Field(() => String)
-  @Property({type:"date"})
+  @Property({ type: "date" })
   createdAt = new Date();
 
   @Field(() => String)
-  @Property({ type: "date",onUpdate: () => new Date() })
+  @Property({ type: "date", onUpdate: () => new Date() })
   updatedAt = new Date();
 
   @Field(() => String)
-  @Property({type:'text'})
+  @Property({ type: 'text' })
   title!: string;
 }
