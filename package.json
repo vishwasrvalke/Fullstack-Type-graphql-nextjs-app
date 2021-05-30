@@ -9,6 +9,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon dist/index.js",
     "dev2": "nodemon --exec ts-node src/index.ts",
+    "create:migration": "mikro-orm migration:create",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "@mikro-orm/migrations": "^4.5.5",
     "@mikro-orm/postgresql": "^4.5.5",
     "apollo-server-express": "^2.25.0",
+    "argon2": "^0.27.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
