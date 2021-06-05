@@ -23,27 +23,27 @@ export const Register: React.FC<registerProps> = ({}) => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <InputField
-              name="username"
-              placeholder="username"
-              label="Username"
-            />
             <Box mt={4}>
+              <InputField
+                name="username"
+                placeholder="username"
+                label="Username"
+              />
               <InputField
                 name="password"
                 placeholder="password"
                 label="Password"
                 type="password"
               />
+              <Button
+                mt={4}
+                type="submit"
+                isLoading={isSubmitting}
+                colorScheme="teal"
+              >
+                REGISTER
+              </Button>
             </Box>
-            <Button
-              mt={4}
-              type="submit"
-              isLoading={isSubmitting}
-              variantColor="teal"
-            >
-              REGISTER
-            </Button>
           </Form>
         )}
       </Formik>
