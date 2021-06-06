@@ -1,10 +1,7 @@
 mutation Register($username: String!, $password: String!) {
   register(options: { username: $username, password: $password }) {
     user {
-      id
-      createdAt
-      updatedAt
-      username
+      ...genericuser
     }
     errors {
       field
