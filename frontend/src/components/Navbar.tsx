@@ -20,12 +20,12 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         </NextLink>
         <NextLink href="/register">
           <Link>Register</Link>
-        </NextLink>
-      </>
+        </NextLink>         
+      </>                 
     );
   } else {
     body = (
-      <Flex>
+      <Flex>        
         <Box mr={2}>{data.me.username}</Box>
         <Button
           onClick={() => {
@@ -40,8 +40,8 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
     );
   }
   return (
-    <Flex bg="green.300" p={4}>
-      <Box ml={"auto"}>{body}</Box>
-    </Flex>
+    <Flex bg="green.300" p={4}>                               
+      <Box ml={"auto"}>{body}</Box>       
+    </Flex>         
   );
 };
