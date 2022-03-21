@@ -1,7 +1,4 @@
 fragment genericuser on User {
   id
   username
-  createdAt
-  updatedAt
-  __typename
 }
